@@ -14,6 +14,7 @@ timeleft = 15
 questions = []
 answerboxes = [option1,option2,option3,option4]
 game = False
+score = 0
 def draw():
     screen.fill("black")
     screen.draw.filled_rect(titlebox, "purple")
@@ -74,11 +75,34 @@ clock.schedule_interval(update_time,1)
 
 
 def on_mouse_down(pos):
+    global question,score,timeleft,questions,game
     index = 1
     for box in answerboxes:
-        if box.collidepoint(pos):
-            pass
+        if box.collidepoint(pos): 
+            if index is int(question[5]):
+                score = score + 1
+                if questions:
+                    question = read_question()
+                    timeleft = 15
+                else:
+                        question = [f"You score{score}",'-','-','-','-',0]
+                        timeleft = 0
+                        game = True
+            else:    
+                    gameover()
+        index += 1
 
+    if skipbox.collidepoint(pos):
+        if questions:
+            question = read_question()
+            timeleft = 15
+    if resetbox.collidepoint(pos):
+        questions = []
+        read_file()
+        timeleft = 15 
+        score = 0
+        game = False  
+        question = read_question()    
 
 
 
