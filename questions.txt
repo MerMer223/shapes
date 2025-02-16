@@ -9,3 +9,5 @@ Which is the tallest mountain in the world?|Mount Kilimanjaro|Mount Denali|Mount
 Which planet is known as the red planet?|Venus|Mars|Earth|Jupitar|2
 Which part of the body continue to grow for your entire life?|Brain|Teeth|Nose|Eyes|3
 Which first electrical item did Thomas Edision invent?|Rice cooker|Lightbulb|Hair Dryer|Fan|2 
+What is the largest country on Earth?|Canada|Brazil|United States|Russia|4
+Which process do plants use to generate their own food?|Cellular Respiration|Sunlight|Photosynthesis|Osmosis|3

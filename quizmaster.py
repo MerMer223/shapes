@@ -59,8 +59,10 @@ question = read_question()
 def gameover():
     global timeleft,game
     global question
+    global score
     question = ["Gameover",'-','-','-','-',5]
     timeleft = 0
+    question = [f"You score{score}",'-','-','-','-',0]
     game = True
 
 
