@@ -64,10 +64,6 @@ def on_mouse_down(pos):
 
     
 
-
-
-
-
 def makeenemies():
     enemy = Actor("greenenemy")
     enemies.append(enemy)
@@ -86,11 +82,25 @@ def makeenemies():
         enemy.y = 544
 
 
+def updateexplosion():
+    global explosions
+    for explosion in explosions:
+        if explosion.image == "explosion1":
+            explosion.image = "explosion2"
+        elif explosion.image == "explosion2":
+            explosion.image = "explosion3"
+        elif explosion.image == "explosion3":
+            explosion.image = "explosion4"
+        elif explosion.image == "explosion4":
+            explosion.image = "explosion5"
+        elif explosion.image == "explosion5":
+            explosion.image = "explosion6"
+        elif explosion.image == "explosion6":
+            explosions.remove(explosion)
+    clock.schedule(updateexplosion,0.1)
 
 
-
-
-
+clock.schedule(updateexplosion,0.1)
 
 
 
